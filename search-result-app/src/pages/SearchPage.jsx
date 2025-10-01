@@ -3,8 +3,7 @@ import { results } from "../data";
 import ResultCard from "../components/ResultCard";
 import TagFilter from "../components/TagFilter";
 import AutosuggestInput from "../components/AutosuggestInput";
-import { useNavigate } from "react-router-dom";
-
+                                                                                                                          
 export default function SearchPage() {
   const [filtered, setFiltered] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
@@ -12,7 +11,6 @@ export default function SearchPage() {
   const [loading, setLoading] = useState(true);
 
   const uniqueTags = Array.from(new Set(results.flatMap(r => r.tags)));
-  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -40,10 +38,6 @@ export default function SearchPage() {
         <h1 className="text-3xl font-semibold text-zinc-900 tracking-wide">
           BlogSpace
         </h1>
-        <button className="ring ring-red-800 py-2 px-3 bg-red-500 text-white rounded-3xl font-semibold cursor-pointer"
-          onClick={() => navigate('/contact-us')}>
-          Contact Us
-        </button>
       </div>
       <AutosuggestInput allData={results} onSelect={setQuery} />
       <TagFilter tags={uniqueTags} selectedTag={selectedTag} setSelectedTag={setSelectedTag} />

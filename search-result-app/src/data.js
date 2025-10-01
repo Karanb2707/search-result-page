@@ -73,7 +73,7 @@ export const results = [
     id: 11,
     title: "Performance Optimization Tips",
     description: "Speed up your React apps with proven techniques.",
-    image: "https://cdn.smartplaybooks.io/wp-content/uploads/2024/08/Manufacturing-Process-Optimization.jpg",
+    image: "https://greatlakesadvisory.com/wp-content/uploads/2022/06/optimized-process.jpg",
     tags: ["Performance", "React", "Optimization"],
   },
   {
